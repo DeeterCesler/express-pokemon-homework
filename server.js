@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const Pokemon = require("./models/pokemon.js");
 
+app.use(express.static(__dirname + '/views'));
+
 app.get("/pokemon", (req, res) => {
-    res.send(Pokemon);
-    // res.render("index.ejs", {
-    //     pokemonList: [1,2,3]
-    // })
+    // res.send(Pokemon);
+    res.render("index.ejs", {
+        pokemonList: Pokemon
+    })
 })
 
 
