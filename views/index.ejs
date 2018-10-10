@@ -10,8 +10,10 @@
 </head>
 <body>
     <h1>POKEMANS</h1>
+    <ul>
     <% for(let i=0; i<pokemonList.length; i++) { %>
-        <p><a href="pokemon/<%= i %>"><%= pokemonList[i].name %></a></p>
+        <li><a href="pokemon/<%= i %>"><%= pokemonList[i].name %></a></li>
     <% } %>
+    </ul>
 </body>
 </html>
